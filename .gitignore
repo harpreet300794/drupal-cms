@@ -1,0 +1,49 @@
+# Drupal core and contributed modules
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/vendor/
+/modules/contrib/
+/themes/contrib/
+/profiles/contrib/
+/sites/*/files/
+/sites/*/private/
+/sites/*/settings.local.php
+
+# Backup and temporary files
+*.sqlite
+*.tar.gz
+*.zip
+*.tar
+*.backup
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# DDEV specific files
+.ddev/
+
+# Node.js dependencies
+node_modules/
+
+# Composer files
+composer.phar
+# composer.lock
+
+# Environment specific files
+/.env
+/.env.local
+/.env.*.local
+/.idea/
+*.iml
+
+# IDE specific files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Other build related files
+build/
+dist/
