@@ -1,0 +1,35 @@
+uuid: df4f4f8b-d458-482f-a43b-97f7858271ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - sdc_block
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_componentcard
+theme: drupal_cms_olivero
+region: sidebar
+weight: -6
+provider: null
+plugin: 'sdc_component_block:cl_editorial:component-card'
+settings:
+  id: 'sdc_component_block:cl_editorial:component-card'
+  label: 'Component Card'
+  label_display: '0'
+  provider: sdc_block
+  context_mapping: {  }
+  component:
+    props:
+      name: test
+      machineName: test_this
+      id: 'my-plugin:task01'
+      description: 'test test test test test test test test test test test test test test test test '
+      thumbnailHref: ''
+      group: ''
+    slots: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

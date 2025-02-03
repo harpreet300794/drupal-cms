@@ -1,0 +1,37 @@
+{% stories side_by_side with { title: 'Side By Side' } %}
+  {% story default with {
+    name: '1. Default',
+    args: {
+      heading_level: 3,
+      image_alt: 'Alternative text for a random image.',
+    }
+  } %}
+    {% embed 'sdc_examples:side-by-side' with {
+      heading: { level: heading_level },
+      image: {
+        src: 'https://drupal-contrib.ddev.site/sites/default/files/styles/large_3_2_2x/public/vegan-chocolate-nut-brownies.jpg?itok=iVu5SBTN',
+        alt: image_alt,
+        width: 100,
+      },
+      imagePosition: 'left',
+    } only %}
+      {% block sbs_heading_text %}
+        The world will <strong>never</strong> be the same!
+      {% endblock %}
+      {% block sbs_body %}
+        <p>This is my body. It <em>can</em> contain <strong>HTML</strong> in here.</p>
+        <ul>
+          <li>Faster <strong>first</strong> contentful paint.</li>
+          <li>Distributed content delivery networks.</li>
+          <li>High availability and redundancy.</li>
+        </ul>
+        <p>
+          {{ include('sdc_examples:image', {
+            src: 'https://drupal-contrib.ddev.site/core/profiles/demo_umami/themes/umami/logo.svg',
+            alt: 'The umami logo',
+          }) }}
+        </p>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+{% endstories %}

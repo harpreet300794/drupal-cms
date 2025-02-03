@@ -1,0 +1,60 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Side By Side
+description: Component with header and body on one side, and image on the other.
+props:
+  type: object
+  required:
+    - heading
+    - image
+  properties:
+    heading:
+      type: object
+      required:
+        - level
+      properties:
+        level:
+          title: Heading level
+          type: integer
+          minimum: 1
+          maximum: 6
+    image:
+      title: Media Image
+      description: Background image for the banner.
+      type: object
+      required:
+        - src
+        - alt
+      properties:
+        src:
+          title: Image source URL
+          type: string
+          format: uri-reference
+        alt:
+          title: Alternative text
+          description: The text to be shown instead of the image if the image cannot load.
+          type: string
+        width:
+          title: Width
+          description: The percentage of the width of the container.
+          type: integer
+          minimum: 0
+          maximum: 100
+        height:
+          title: Height
+          description: The percentage of the height of the container.
+          type: integer
+          minimum: 0
+          maximum: 100
+    imagePosition:
+      title: Image Position
+      description: The position of the image tile.
+      type: string
+      enum: ['left', 'right']
+
+slots:
+  sbs_body:
+    title: Body
+    required: true
+  sbs_heading_text:
+    title: Heading Body
+    required: true

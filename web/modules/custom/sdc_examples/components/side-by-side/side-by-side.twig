@@ -1,0 +1,39 @@
+<div{{ attributes.addClass('side-by-side') }} data-image-position="{{ imagePosition }}">
+  <div class="side-by-side__column side-by-side__column--image">
+    {{ include(
+      'sdc_examples:image',
+      {
+        src: image.src,
+        alt: image.alt,
+        width: image.width,
+        height: image.height,
+        attributes: create_attribute().addClass('side-by-side__column__image')
+      },
+      with_context = FALSE
+    ) }}
+  </div>
+  {#
+    Twig does limit putting blocks within blocks. The only viable way I have
+    found is to set this component's block to a variable using:
+    {% set my_name %}{% block my_slot %}{% endblock %}{% endset %}
+    And later on put it inside of the embedded component's slot. If there is a
+    better way, please let me know.
+  #}
+  {% set heading_text %}
+    {% block sbs_heading_text %}{% endblock %}
+  {% endset %}
+  <div class="side-by-side__column side-by-side__column--text">
+    {% embed 'sdc_examples:heading' with {
+      level: heading.level,
+      attributes: create_attribute().addClass('side-by-side__column__heading')
+    } %}
+      {% block heading_text %}
+        {{ heading_text }}
+      {% endblock %}
+    {% endembed %}
+
+    {% block sbs_body %}
+      <p>This is the <em>default text</em> for the side-by-side body.
+    {% endblock %}
+  </div>
+</div>

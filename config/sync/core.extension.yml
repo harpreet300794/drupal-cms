@@ -42,6 +42,7 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
+  cl_editorial: 0
   classy_paragraphs: 0
   coffee: 0
   config: 0
@@ -124,7 +125,11 @@ module:
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
+  sdc_block: 0
+  sdc_examples: 0
+  sdc_tags: 0
   section_library: 0
+  serialization: 0
   settings_tray: 0
   smart_date: 0
   svg_image: 0

@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Image
+description: A simple image component.
+props:
+  type: object
+  required:
+    - src
+    - alt
+  properties:
+    src:
+      title: Image source URL
+      type: string
+      format: uri-reference
+    alt:
+      title: Alternative text
+      description: The text to be shown instead of the image if the image cannot load.
+      type: string
+    width:
+      title: Width
+      description: The percentage of the width of the container.
+      type: integer
+      minimum: 0
+      maximum: 100
+    height:
+      title: Height
+      description: The percentage of the height of the container.
+      type:
+        - integer
+        - 'null'
+      minimum: 0
+      maximum: 100

@@ -1,0 +1,40 @@
+uuid: a7e300ad-b481-4fcc-abc4-b28b61191cda
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_classes
+    - block_visibility_groups
+    - sdc_block
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_banner
+theme: drupal_cms_olivero
+region: content_below
+weight: 0
+provider: null
+plugin: 'sdc_component_block:sdc_examples:my-banner'
+settings:
+  id: 'sdc_component_block:sdc_examples:my-banner'
+  label: Banner
+  label_display: '0'
+  provider: sdc_block
+  context_mapping:
+    node: '@node.node_route_context:node'
+  component:
+    props:
+      heading: 'article demo '
+      ctaText: 'Click me'
+      ctaHref: /projects/building-robust-digital-experience-leading-sports-association
+      ctaTarget: ''
+      image: /sites/default/files/2024-12/drupal-cms-logo.png
+    slots:
+      banner_body:
+        value: '<p>article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo article demo&nbsp;</p>'
+        format: content_format
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

@@ -24,6 +24,7 @@
         "drupal/blockgroup": "^2.0",
         "drupal/bootstrap_layout_builder": "^2.2",
         "drupal/bootstrap_styles": "^1.2",
+        "drupal/cl_editorial": "^3.0@RC",
         "drupal/classy_paragraphs": "^2.0",
         "drupal/core-composer-scaffold": "^11.1.1",
         "drupal/core-project-message": "^11.1.1",
@@ -52,7 +53,8 @@
         "drupal/project_browser": "@alpha",
         "drupal/section_library": "^1.2",
         "drupal/webform": "@beta",
-        "drush/drush": "^13"
+        "drush/drush": "^13",
+        "e0ipso/schema-forms": "^2.5"
     },
     "conflict": {
         "drupal/drupal": "*"

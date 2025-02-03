@@ -9,6 +9,7 @@
 /sites/*/files/
 /sites/*/private/
 /sites/*/settings.local.php
+/web/sites/default/files/
 
 # Backup and temporary files
 *.sqlite

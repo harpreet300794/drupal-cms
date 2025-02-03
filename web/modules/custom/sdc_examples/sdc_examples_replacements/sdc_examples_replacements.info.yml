@@ -1,0 +1,7 @@
+name: 'Components Example Replacements'
+description: Provides example components.
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:sdc
+  - sdc_examples:sdc_examples

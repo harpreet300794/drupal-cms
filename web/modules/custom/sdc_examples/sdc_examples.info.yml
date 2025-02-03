@@ -1,0 +1,4 @@
+name: 'Component Libraries: Components Examples'
+description: Provides example components.
+type: module
+core_version_requirement: ^9 || ^10 || ^11
